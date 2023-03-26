@@ -2,6 +2,8 @@ const numberKeys = document.querySelectorAll('.number-key');
 const operatorKeys = document.querySelectorAll('.operator-key');
 const result = document.querySelector('.result');
 
+//TODO : 
+
 let num1 = "";
 let num2 = "";
 let operator = '';
@@ -21,13 +23,17 @@ function numDisplay() {
   });
 }
 
-function setOperator 
-operatorKeys.forEach(key => {
-  key.addEventListener("click", () => {
-    operator = key.innerHTML;
-    isFirstNum = false;
-  })
-});
+function setOperator() {
+  operatorKeys.forEach(key => {
+    key.addEventListener("click", () => {
+      operator = key.innerHTML;
+      isFirstNum = false;
+    })
+  });
+}
+
+numDisplay();
+setOperator();
 
 function operate() {
 
