@@ -9,6 +9,11 @@ let num2 = "";
 let operator = '';
 let isFirstNum = true;
 
+function startingPoint() {
+  let num1 = "";
+  let num2 = "";
+}
+
 function numDisplay() {
   numberKeys.forEach(key => {
     key.addEventListener("click", () => {
@@ -32,8 +37,25 @@ function setOperator() {
   });
 }
 
+function operatorDisplay() {
+  operatorKeys.forEach(key => {
+    key.addEventListener("click", () => {
+      result.innerHTML = operator;
+    });
+  });
+}
+
+function clearDisplay() {
+  operatorKeys.forEach(key => {
+    key.addEventListener("click", () => {
+
+    });
+  });
+}
+
 numDisplay();
 setOperator();
+operatorDisplay();
 
 function operate() {
 
