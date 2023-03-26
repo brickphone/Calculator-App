@@ -2,7 +2,7 @@ const numberKeys = document.querySelectorAll('.number-key');
 const operatorKeys = document.querySelectorAll('.operator-key');
 const result = document.querySelector('.result');
 
-//TODO : 
+//TODO : fix game logic
 
 let num1 = "";
 let num2 = "";
@@ -10,8 +10,11 @@ let operator = '';
 let isFirstNum = true;
 
 function startingPoint() {
-  let num1 = "";
-  let num2 = "";
+  result.innerHTML = '0';
+  num1 = '';
+  num2 = '';
+  operator = '';
+  isFirstNum = true;
 }
 
 function numDisplay() {
@@ -46,16 +49,16 @@ function operatorDisplay() {
 }
 
 function clearDisplay() {
-  operatorKeys.forEach(key => {
-    key.addEventListener("click", () => {
-
-    });
-  });
+  const clearBtn = document.querySelector('#clear')
+  clearBtn.addEventListener("click", () => {
+    startingPoint();
+  })
 }
 
 numDisplay();
 setOperator();
 operatorDisplay();
+clearDisplay();
 
 function operate() {
 
