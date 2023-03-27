@@ -60,6 +60,8 @@ setOperator();
 operatorDisplay();
 clearDisplay();
 
+let total = 0;
+
 function operate() {
 
 }
