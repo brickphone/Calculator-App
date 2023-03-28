@@ -60,6 +60,7 @@ setOperator();
 operatorDisplay();
 clearDisplay();
 
+<<<<<<< HEAD
 function operate(num1, num2, operator) {
   let totalSum = 0;
   
@@ -77,3 +78,10 @@ function operate(num1, num2, operator) {
   }
  
 }
+=======
+let total = 0;
+
+function operate() {
+
+}
+>>>>>>> fa35c41d57c9f96e469b92094bf4ef1e0ec51568
