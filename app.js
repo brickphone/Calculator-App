@@ -30,6 +30,7 @@ function numDisplay() {
   });
 }
 
+//adds an event listener for the equals key
 equalsKey.addEventListener('click', () => {
   operate(num1, num2, operator);
 });
