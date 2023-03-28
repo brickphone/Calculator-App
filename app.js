@@ -60,6 +60,20 @@ setOperator();
 operatorDisplay();
 clearDisplay();
 
-function operate() {
-
+function operate(num1, num2, operator) {
+  let totalSum = 0;
+  
+  if (operator === '+') {
+    totalSum = (num1) + (num2);
+  } else if (operator === '-') {
+    totalSum = (num1) - (num2);
+  } else if (operator === '*') {
+    totalSum = (num1) * (num2);
+  } else if (operator === '/') {
+    totalSum = (num1) / (num2);
+  };
+  if (operator === '=') {
+    result.innerHTML = totalSum;
+  }
+ 
 }
