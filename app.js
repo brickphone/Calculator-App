@@ -36,16 +36,13 @@ function setOperator() {
     key.addEventListener("click", () => {
       operator = key.innerHTML;
       isFirstNum = false;
+      operatorDisplay();
     })
   });
 }
 
 function operatorDisplay() {
-  operatorKeys.forEach(key => {
-    key.addEventListener("click", () => {
-      result.innerHTML = operator;
-    });
-  });
+  result.innerHTML = operator;
 }
 
 function clearDisplay() {
@@ -55,33 +52,29 @@ function clearDisplay() {
   })
 }
 
-numDisplay();
-setOperator();
-operatorDisplay();
-clearDisplay();
+function calculate() {
+  const totalSum = operate(num1, num2, operator);
+  result.innerHTML = totalSum;
+}
 
-<<<<<<< HEAD
 function operate(num1, num2, operator) {
   let totalSum = 0;
   
   if (operator === '+') {
-    totalSum = (num1) + (num2);
+    totalSum = parseFloat(num1) + parseFloat(num2);
   } else if (operator === '-') {
-    totalSum = (num1) - (num2);
+    totalSum = parseFloat(num1) - parseFloat(num2);
   } else if (operator === '*') {
-    totalSum = (num1) * (num2);
+    totalSum = parseFloat(num1) * parseFloat(num2);
   } else if (operator === '/') {
-    totalSum = (num1) / (num2);
-  };
-  if (operator === '=') {
-    result.innerHTML = totalSum;
+    totalSum = parseFloat(num1) / parseFloat(num2);
+  } else if (operator === '=') {
+    totalSum = parseFloat(num2);
   }
- 
-}
-=======
-let total = 0;
+  
+  return totalSumM;
+};
 
-function operate() {
-
-}
->>>>>>> fa35c41d57c9f96e469b92094bf4ef1e0ec51568
+numDisplay();
+setOperator();
+clearDisplay();
